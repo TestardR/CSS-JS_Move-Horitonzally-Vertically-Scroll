@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Move Background Image On Scroll</title>
+  </head>
+  <body>
+    <section></section>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(window).scroll(function() {
+        var scroll_position = $(window).scrollTop() / 2;
+        $('section').css({
+          'background-position-x': -scroll_position + 'px'
+        });
+      });
+    </script>
+  </body>
+</html>
